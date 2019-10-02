@@ -2,7 +2,7 @@
 //Given a string, return true id the string is a palindrome.
 
 function palindrome(str) {
-    const reversed = str.split('').reverse('').join('');
+    const reversed = str.split('').reverse().join('');
     return str === reversed
         
 }

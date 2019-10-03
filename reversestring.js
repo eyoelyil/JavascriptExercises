@@ -61,3 +61,12 @@ function reverseStr(str) {
 }
 
 console.log(reverseStr('arrowfunction'));
+
+
+// using reduce() method, since reduce() iterate through ar array, the given string should be changed to array, use .split('')
+
+function reverseUsingReduce(str) {
+   return str.split('').reduce((reversed,word) => word + reversed, '');
+}
+
+console.log(reverseUsingReduce('reducereverse'))

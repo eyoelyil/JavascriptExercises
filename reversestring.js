@@ -51,3 +51,13 @@ function reverseStr(str) {
 }
 
 console.log(reverseStr('hello world')) 
+
+//ES6 arrow function for the forEach
+function reverseStr(str) {
+   let reversed = '';
+
+   str.split('').forEach(word => reversed = word + reversed);
+   return reversed;
+}
+
+console.log(reverseStr('arrowfunction'));

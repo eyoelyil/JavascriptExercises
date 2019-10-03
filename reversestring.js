@@ -28,7 +28,7 @@ console.log(reverse('hello'))
 }*/
 
 // for of loop
-function reverseStr(str) {
+/* function reverseStr(str) {
 let reversed = '';
 
    for (let word of str) {
@@ -37,6 +37,17 @@ let reversed = '';
    return reversed;
 }
 
+console.log(reverseStr('hello world')) */
 
+//higher order array method for each loop
+function reverseStr(str) {
+   let reversed = '';
 
-console.log(reverseStr('hello world'))
+   str.split('').forEach (function(word) {
+      reversed = word + reversed;
+   }) 
+      
+   return reversed;
+}
+
+console.log(reverseStr('hello world')) 

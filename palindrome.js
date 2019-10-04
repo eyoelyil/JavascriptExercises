@@ -7,4 +7,4 @@ function palindrome(str) {
         
 }
 
-console.log(palindrome('woooooow'))
+console.log(palindrome('racecar'))

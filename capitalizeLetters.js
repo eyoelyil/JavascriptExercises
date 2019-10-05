@@ -10,3 +10,23 @@ function capitalizeLetters(str) {
 }
 
 console.log(capitalizeLetters('happ new year'))
+
+function capitalizeFirstWord(str) {
+    return str
+        .toLowerCase()
+        .split(' ')
+        .map(word => word[0].toUpperCase() + word.substr(1))
+        .join(' ')
+}
+
+console.log(capitalizeFirstWord('i love javascript'))
+
+// using regular expressions
+
+function regExe(str) {
+    return str.replace(/\b[a-z]/gi, function (word) {
+        return word.toUpperCase()
+    })
+}
+
+console.log(regExe('this is with regular expressions'))

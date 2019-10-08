@@ -32,7 +32,7 @@ function regExe(str) {
 console.log(regExe('this is with regular expressions'))
 
 
-//-------------------
+//-----------------------
 
 function capitalize(str) {
     const words = [];
@@ -44,3 +44,20 @@ function capitalize(str) {
 }
 
 console.log(capitalize('this one is easy'))
+
+//-------------------------
+
+function capitalizee(str) {
+    let result = str[0].toUpperCase();
+
+    for (let i = 1; i < str.length; i++) {
+        if(str[i - 1] === ' ') {
+            result += str[i].toUpperCase();
+        } else {
+            result += str[i];
+        }
+    }
+    return result;
+}
+
+console.log(capitalizee('this one is easy'))

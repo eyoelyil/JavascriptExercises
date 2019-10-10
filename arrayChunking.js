@@ -30,10 +30,35 @@ function chunk(array, size) {
     let index = 0;
 
     while (index < array.length) {
+        // Slice out from the index to the index + the chunk length and push on to the chunked array
         chunked.push(array.slice(index,index + size))
+        // increment by chunk length
         index += size;
     }
     return chunked;
 }
 
 console.log(chunk([1,2,3,4,5], 2))
+
+
+//----------------
+
+
+// initialize the chunked array
+function chunkArray(arr, len) {
+    const chunkedArr = []
+
+    arr.forEach(function (val) {
+        const last = chunkedArr[chunkedArr.length - 1];
+
+        if (!last || last.length === len) {
+            chunkedArr.push([val])
+        } else {
+            last.push(val)
+        }
+    })
+
+    return chunkedArr;
+}
+
+console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9], 2))

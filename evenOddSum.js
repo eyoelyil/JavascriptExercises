@@ -20,3 +20,16 @@ function evenOddSum (arr) {
 }
 
 console.log(evenOddSum([1,2,3,4,5,6]))
+
+
+// Solution 2
+
+function evenOddSums(arr) {
+    let evenSum = 0;
+    let oddSum = 0;
+
+    arr.forEach(num => (num % 2 === 0 ? (evenSum += num) : ( oddSum += num)));
+    return [evenSum,oddSum];
+}
+
+console.log(evenOddSums([1, 2, 3, 4, 5, 6]))

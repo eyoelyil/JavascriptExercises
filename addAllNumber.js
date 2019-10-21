@@ -17,9 +17,7 @@ console.log(addAll(2,3,4))
 
 // Solution 2 ES6 reduce()
 function addNum(...num) {
-    return num.reduce(function(a, b) {
-        return a + b
-    })
+    return num.reduce((a, b) => a + b)
 }
 
 console.log(addNum(2,3,4))
